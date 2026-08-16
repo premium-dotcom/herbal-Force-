@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Herbal Force | Natural Skin Care & Consultations</title>
+
+<meta name="description"
+content="Herbal Force specialises in skin concerns including psoriasis, eczema, pimples, acne and pimple marks. Book a consultation or learn more about our approach.">
+
+<meta name="theme-color" content="#10251c">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f5ef;
+    color:#17251e;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,input,select,textarea{
+    font:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1180px;
+    margin:auto;
+}
+
+:root{
+    --green:#173b2b;
+    --green2:#24543d;
+    --sage:#718c76;
+    --cream:#f7f5ef;
+    --cream2:#eeeadf;
+    --gold:#c9a45b;
+    --dark:#10251c;
+    --text:#17251e;
+    --muted:#68746d;
+    --white:#fff;
+    --border:#dfe3dc;
+}
+
+/* NAV */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:78px;
+    z-index:1000;
+
+    background:rgba(247,245,239,.92);
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(23,59,43,.1);
+}
+
+.nav-inner{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--green);
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    align-items:center;
+
+    font-size:13px;
+    font-weight:700;
+    color:#536058;
+}
+
+.nav-links a:hover{
+    color:var(--green);
+}
+
+.nav-button{
+    background:var(--green);
+    color:white;
+
+    padding:11px 20px;
+    border-radius:999px;
+
+    font-size:12px;
+    font-weight:900;
+}
+
+.menu{
+    display:none;
+    border:0;
+    background:none;
+    font-size:27px;
+    color:var(--green);
+}
+
+/* MOBILE MENU */
+
+.mobile-menu{
+    display:none;
+    position:fixed;
+    top:78px;
+    left:0;
+    right:0;
+    z-index:999;
+
+    padding:20px 5%;
+
+    background:#f7f5ef;
+    border-bottom:1px solid var(--border);
+}
+
+.mobile-menu.active{
+    display:block;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:14px 0;
+    border-bottom:1px solid var(--border);
+    font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+    min-height:850px;
+    padding-top:78px;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(201,164,91,.18),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #f7f5ef 0%,
+            #e9eee6 100%
+        );
+
+    overflow:hidden;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
+
+.eyebrow{
+    color:var(--sage);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    margin:22px 0;
+
+    font-size:clamp(54px,7vw,92px);
+    line-height:.92;
+    letter-spacing:-5px;
+
+    color:var(--green);
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    max-width:580px;
+    color:var(--muted);
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:30px;
+}
+
+.button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:15px 24px;
+    border-radius:999px;
+
+    background:var(--green);
+    color:white;
+
+    font-size:13px;
+    font-weight:900;
+
+    border:1px solid var(--green);
+
+    transition:.25s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+    background:var(--green2);
+}
+
+.button-light{
+    background:transparent;
+    color:var(--green);
+}
+
+.button-light:hover{
+    background:white;
+}
+
+.hero-note{
+    margin-top:20px;
+    color:#7d877f;
+    font-size:12px;
+}
+
+/* HERO CARD */
+
+.hero-card{
+    padding:38px;
+
+    background:rgba(255,255,255,.68);
+    border:1px solid rgba(23,59,43,.1);
+    border-radius:28px;
+
+    box-shadow:0 25px 70px rgba(23,59,43,.1);
+}
+
+.hero-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:28px;
+}
+
+.hero-card-badge{
+    padding:8px 12px;
+    border-radius:999px;
+
+    background:#e3ece4;
+    color:var(--green);
+
+    font-size:10px;
+    font-weight:900;
+}
+
+.hero-card h3{
+    font-size:31px;
+    line-height:1.05;
+    color:var(--green);
+}
+
+.hero-card p{
+    margin-top:15px;
+    font-size:14px;
+}
+
+.card-list{
+    margin-top:25px;
+    display:grid;
+    gap:12px;
+}
+
+.card-list div{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+
+    color:#526058;
+    font-size:13px;
+}
+
+.check{
+    color:var(--gold);
+    font-weight:900;
+}
+
+/* TRUST BAR */
+
+.trust{
+    background:var(--green);
+    color:white;
+    padding:25px 0;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.trust strong{
+    display:block;
+    font-size:15px;
+}
+
+.trust span{
+    color:#b7c8bc;
+    font-size:11px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:110px 0;
+}
+
+.dark-section{
+    background:var(--dark);
+    color:white;
+}
+
+.section-heading{
+    max-width:700px;
+    margin-bottom:55px;
+}
+
+.section-heading h2{
+    margin-top:12px;
+
+    font-size:clamp(42px,6vw,70px);
+    line-height:.94;
+    letter-spacing:-4px;
+}
+
+.section-heading p{
+    margin-top:20px;
+    color:var(--muted);
+}
+
+.dark-section .section-heading p{
+    color:#b1bdb5;
+}
+
+/* CONDITIONS */
+
+.conditions{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.condition{
+    min-height:250px;
+
+    padding:28px;
+
+    background:white;
+    border:1px solid var(--border);
+    border-radius:22px;
+
+    transition:.25s;
+}
+
+.condition:hover{
+    transform:translateY(-5px);
+    border-color:#bfcfc1;
+}
+
+.condition-number{
+    color:var(--gold);
+    font-weight:900;
+    font-size:11px;
+}
+
+.condition h3{
+    margin-top:35px;
+    font-size:23px;
+    color:var(--green);
+}
+
+.condition p{
+    margin-top:10px;
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* PROCESS */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.process-card{
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:22px;
+
+    background:rgba(255,255,255,.04);
+}
+
+.process-number{
+    color:var(--gold);
+    font-weight:900;
+    font-size:12px;
+}
+
+.process-card h3{
+    margin-top:30px;
+    font-size:25px;
+}
+
+.process-card p{
+    margin-top:12px;
+    color:#aebbb2;
+    font-size:14px;
+}
+
+/* QUESTIONNAIRE */
+
+.questionnaire{
+    max-width:850px;
+    margin:auto;
+
+    background:white;
+    border:1px solid var(--border);
+    border-radius:28px;
+
+    padding:40px;
+
+    box-shadow:0 25px 70px rgba(23,59,43,.08);
+}
+
+.questionnaire-intro{
+    margin-bottom:35px;
+}
+
+.questionnaire-intro h3{
+    font-size:32px;
+    color:var(--green);
+}
+
+.questionnaire-intro p{
+    margin-top:8px;
+    color:var(--muted);
+    font-size:14px;
+}
+
+.form-group{
+    margin-bottom:24px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:9px;
+
+    color:var(--green);
+    font-size:13px;
+    font-weight:900;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+
+    padding:14px 15px;
+
+    border:1px solid var(--border);
+    border-radius:12px;
+
+    background:#fbfbf9;
+    color:var(--text);
+
+    outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:var(--sage);
+}
+
+textarea{
+    min-height:110px;
+    resize:vertical;
+}
+
+.checkbox-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.checkbox{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:13px;
+
+    border:1px solid var(--border);
+    border-radius:11px;
+
+    color:#56625a;
+    font-size:13px;
+}
+
+.checkbox input{
+    width:auto;
+}
+
+.notice{
+    margin-top:20px;
+    padding:15px;
+
+    background:#f0f4ef;
+    border-left:3px solid var(--sage);
+
+    color:#5d6861;
+    font-size:12px;
+}
+
+/* BOOKING */
+
+.booking-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:60px;
+    align-items:start;
+}
+
+.booking-info h2{
+    font-size:clamp(43px,6vw,70px);
+    line-height:.92;
+    letter-spacing:-4px;
+}
+
+.booking-info p{
+    margin-top:20px;
+    color:#b1bdb5;
+}
+
+.booking-benefits{
+    margin-top:30px;
+    display:grid;
+    gap:13px;
+}
+
+.booking-benefits div{
+    color:#d1dbd3;
+    font-size:13px;
+}
+
+/* BOOKING FORM */
+
+.booking-form{
+    background:white;
+    color:var(--text);
+    padding:35px;
+    border-radius:25px;
+}
+
+.booking-form h3{
+    color:var(--green);
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.time-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:9px;
+}
+
+.time-option{
+    position:relative;
+}
+
+.time-option input{
+    position:absolute;
+    opacity:0;
+}
+
+.time-option span{
+    display:block;
+
+    padding:12px 5px;
+
+    text-align:center;
+
+    border:1px solid var(--border);
+    border-radius:10px;
+
+    color:#58635c;
+
+    font-size:12px;
+    cursor:pointer;
+}
+
+.time-option input:checked + span{
+    background:var(--green);
+    color:white;
+    border-color:var(--green);
+}
+
+/* LOCATION */
+
+.location-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.location-card{
+    padding:35px;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:22px;
+}
+
+.location-card h3{
+    color:var(--green);
+    font-size:25px;
+}
+
+.location-card p{
+    margin-top:12px;
+    color:var(--muted);
+}
+
+.location-card a{
+    display:inline-block;
+    margin-top:20px;
+    color:var(--green);
+    font-weight:900;
+    font-size:13px;
+}
+
+/* CTA */
+
+.cta{
+    background:var(--gold);
+    color:#17251e;
+}
+
+.cta-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.cta h2{
+    font-size:clamp(43px,6vw,70px);
+    line-height:.9;
+    letter-spacing:-4px;
+}
+
+.cta .button{
+    background:var(--green);
+}
+
+/* FOOTER */
+
+footer{
+    padding:30px 0;
+    background:#0b1a13;
+    color:#91a097;
+    font-size:11px;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .nav-links,
+    .nav-button{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-grid,
+    .booking-grid{
+        grid-template-columns:1fr;
+    }
+
+    .conditions{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:130px 0 80px;
+    }
+
+    .hero h1{
+        font-size:55px;
+        letter-spacing:-3px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .button{
+        width:100%;
+    }
+
+    .trust-grid,
+    .conditions,
+    .location-grid,
+    .checkbox-grid{
+        grid-template-columns:1fr;
+    }
+
+    .questionnaire,
+    .booking-form{
+        padding:25px;
+    }
+
+    .time-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta-inner,
+    .footer-inner{
+        display:block;
+    }
+
+    .cta .button{
+        margin-top:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-inner">
+
+<a href="#home" class="logo">
+HERBAL <span>FORCE</span>
+</a>
+
+<div class="nav-links">
+<a href="#conditions">Concerns</a>
+<a href="#approach">Our Approach</a>
+<a href="#questionnaire">Skin Questionnaire</a>
+<a href="#booking">Consultation</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a href="#booking" class="nav-button">
+BOOK CONSULTATION
+</a>
+
+<button class="menu" id="menuButton">☰</button>
+
+</div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="#conditions">Concerns</a>
+<a href="#approach">Our Approach</a>
+<a href="#questionnaire">Skin Questionnaire</a>
+<a href="#booking">Consultation</a>
+<a href="#contact">Contact</a>
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="eyebrow">
+Natural Skin Care • South Africa
+</div>
+
+<h1>
+Understand<br>
+your skin.<br>
+<span>Start here.</span>
+</h1>
+
+<p>
+Herbal Force specialises in support for common skin
+concerns including psoriasis, eczema, pimples, acne
+and pimple marks.
+</p>
+
+<div class="buttons">
+
+<a href="#questionnaire" class="button">
+START SKIN QUESTIONNAIRE
+</a>
+
+<a href="#booking" class="button button-light">
+BOOK A CONSULTATION
+</a>
+
+</div>
+
+<div class="hero-note">
+Free consultation information is advertised by Herbal Force.
+Please confirm current availability directly with the clinic.
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="hero-card-top">
+
+<div class="hero-card-badge">
+YOUR FIRST STEP
+</div>
+
+<span>✦</span>
+
+</div>
+
+<h3>
+Tell us what you're
+experiencing.
+</h3>
+
+<p>
+A short questionnaire helps organise the information
+you want to discuss during your consultation.
+</p>
+
+<div class="card-list">
+
+<div>
+<span class="check">✓</span>
+Your main skin concern
+</div>
+
+<div>
+<span class="check">✓</span>
+How long you've experienced it
+</div>
+
+<div>
+<span class="check">✓</span>
+Products, medicines or supplements you've used
+</div>
+
+<div>
+<span class="check">✓</span>
+Your preferred consultation time
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<div class="trust">
+
+<div class="container trust-grid">
+
+<div>
+<strong>13+ YEARS</strong>
+<span>Publicly stated experience</span>
+</div>
+
+<div>
+<strong>SOUTH AFRICA</strong>
+<span>Treatment availability advertised nationally</span>
+</div>
+
+<div>
+<strong>FREE CONSULTATION</strong>
+<span>Advertised by Herbal Force</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CONDITIONS -->
+
+<section id="conditions">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+What brings you here?
+</div>
+
+<h2>
+Start with your<br>
+main concern.
+</h2>
+
+<p>
+Everyone's skin story is different. Choose the concern
+that best describes what you'd like to discuss.
+</p>
+
+</div>
+
+<div class="conditions">
+
+<div class="condition">
+<div class="condition-number">01</div>
+<h3>Psoriasis</h3>
+<p>
+Discuss symptoms, history and previous approaches
+during a consultation.
+</p>
+</div>
+
+<div class="condition">
+<div class="condition-number">02</div>
+<h3>Eczema</h3>
+<p>
+Share what you've experienced and what you've
+already tried.
+</p>
+</div>
+
+<div class="condition">
+<div class="condition-number">03</div>
+<h3>Pimples & Acne</h3>
+<p>
+Tell us about your current skin concerns and previous
+products or treatments.
+</p>
+</div>
+
+<div class="condition">
+<div class="condition-number">04</div>
+<h3>Pimple Marks</h3>
+<p>
+Describe the marks or changes you'd like to discuss
+with the clinic.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- APPROACH -->
+
+<section class="dark-section" id="approach">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+The Consultation
+</div>
+
+<h2>
+A conversation<br>
+before a plan.
+</h2>
+
+<p>
+The questionnaire is designed to collect useful background
+information. It is not a diagnosis and does not replace
+professional medical advice.
+</p>
+
+</div>
+
+<div class="process">
+
+<div class="process-card">
+<div class="process-number">01 / TELL US</div>
+<h3>Your concern</h3>
+<p>
+Tell us what you're experiencing, where it occurs and
+how long you've noticed it.
+</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">02 / SHARE</div>
+<h3>Your history</h3>
+<p>
+Tell us about products, medicines and supplements you've
+used so the practitioner has more context.
+</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">03 / DISCUSS</div>
+<h3>Your consultation</h3>
+<p>
+Use the information you provide as a starting point for
+a conversation with Herbal Force.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUESTIONNAIRE -->
+
+<section id="questionnaire">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Skin Questionnaire
+</div>
+
+<h2>
+Let's understand<br>
+your situation.
+</h2>
+
+<p>
+These questions help prepare for your consultation.
+Only provide information you're comfortable sharing.
+</p>
+
+</div>
+
+
+<div class="questionnaire">
+
+<div class="questionnaire-intro">
+
+<h3>About your concern</h3>
+
+<p>
+This form does not diagnose your condition.
+</p>
+
+</div>
+
+
+<form id="skinForm">
+
+<div class="form-group">
+
+<label>Your name</label>
+
+<input
+type="text"
+id="name"
+required
+placeholder="Your name"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>What would you like to discuss?</label>
+
+<div class="checkbox-grid">
+
+<label class="checkbox">
+<input type="checkbox" name="concern" value="Psoriasis">
+Psoriasis
+</label>
+
+<label class="checkbox">
+<input type="checkbox" name="concern" value="Eczema">
+Eczema
+</label>
+
+<label class="checkbox">
+<input type="checkbox" name="concern" value="Pimples / Acne">
+Pimples / Acne
+</label>
+
+<label class="checkbox">
+<input type="checkbox" name="concern" value="Pimple Marks">
+Pimple Marks
+</label>
+
+<label class="checkbox">
+<input type="checkbox" name="concern" value="Other">
+Other
+</label>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>How long have you experienced this concern?</label>
+
+<select id="duration">
+
+<option>Less than 1 month</option>
+<option>1–3 months</option>
+<option>3–6 months</option>
+<option>6–12 months</option>
+<option>More than 1 year</option>
+<option>I'm not sure</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Have you used any medicines, creams, steroids, vitamins or other supplements for this concern?</label>
+
+<select id="productsUsed">
+
+<option>No</option>
+<option>Yes</option>
+<option>I'm not sure</option>
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>If yes, what have you used?</label>
+
+<textarea
+id="history"
+placeholder="Please list anything you remember, including products or supplements."
+></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Anything else you'd like the practitioner to know?</label>
+
+<textarea
+id="notes"
+placeholder="Optional"
+></textarea>
+
+</div>
+
+
+<div class="notice">
+Please don't stop prescribed medicines or treatments based on
+this questionnaire. Discuss your current medicines and
+supplements with an appropriate healthcare professional.
+</div>
+
+<br>
+
+<button class="button" type="submit">
+CONTINUE TO CONSULTATION
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="dark-section" id="booking">
+
+<div class="container booking-grid">
+
+<div class="booking-info">
+
+<div class="eyebrow">
+Book a Consultation
+</div>
+
+<h2>
+Choose a time<br>
+that works.
+</h2>
+
+<p>
+Select a preferred date and time below. Your request will
+be sent to Herbal Force for confirmation.
+</p>
+
+<div class="booking-benefits">
+
+<div>✓ Preferred date</div>
+<div>✓ Preferred consultation time</div>
+<div>✓ Your questionnaire information</div>
+<div>✓ Confirmation by the clinic</div>
+
+</div>
+
+</div>
+
+
+<div class="booking-form">
+
+<h3>
+Consultation request
+</h3>
+
+<form id="bookingForm">
+
+<div class="form-group">
+
+<label>Preferred date</label>
+
+<input
+type="date"
+id="date"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Preferred time</label>
+
+<div class="time-grid">
+
+<label class="time-option">
+<input type="radio" name="time" value="09:00" required>
+<span>09:00</span>
+</label>
+
+<label class="time-option">
+<input type="radio" name="time" value="10:00">
+<span>10:00</span>
+</label>
+
+<label class="time-option">
+<input type="radio" name="time" value="11:00">
+<span>11:00</span>
+</label>
+
+<label class="time-option">
+<input type="radio" name="time" value="12:00">
+<span>12:00</span>
+</label>
+
+<label class="time-option">
+<input type="radio" name="time" value="14:00">
+<span>14:00</span>
+</label>
+
+<label class="time-option">
+<input type="radio" name="time" value="15:00">
+<span>15:00</span>
+</label>
+
+<label class="time-option">
+<input type="radio" name="time" value="16:00">
+<span>16:00</span>
+</label>
+
+<label class="time-option">
+<input type="radio" name="time" value="17:00">
+<span>17:00</span>
+</label>
+
+<label class="time-option">
+<input type="radio" name="time" value="18:00">
+<span>18:00</span>
+</label>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Phone / WhatsApp number</label>
+
+<input
+type="tel"
+id="phone"
+required
+placeholder="e.g. 082 123 4567"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Email address</label>
+
+<input
+type="email"
+id="email"
+placeholder="Optional"
+>
+
+</div>
+
+
+<button
+type="submit"
+class="button"
+>
+REQUEST CONSULTATION
+</button>
+
+<p
+style="margin-top:15px;color:#7c8780;font-size:11px;"
+>
+Submitting a request does not guarantee the selected slot.
+The clinic must confirm availability.
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Find Herbal Force
+</div>
+
+<h2>
+Let's talk about<br>
+your skin.
+</h2>
+
+<p>
+Herbal Force advertises consultations at its office and
+online, with treatment availability across South Africa.
+</p>
+
+</div>
+
+
+<div class="location-grid">
+
+<div class="location-card">
+
+<h3>
+📍 Chatsworth Clinic
+</h3>
+
+<p>
+Herbal Force Skin Clinic<br>
+Chatsworth, KwaZulu-Natal<br>
+South Africa
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Herbal+Force+Skin+Clinic+Chatsworth+South+Africa"
+target="_blank"
+rel="noopener"
+>
+Open Google Maps →
+</a>
+
+</div>
+
+
+<div class="location-card">
+
+<h3>
+☎ Contact
+</h3>
+
+<p>
+Phone: 031 404 7891
+</p>
+
+<a href="tel:+27314047891">
+Call Herbal Force →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container cta-inner">
+
+<h2>
+Your skin story<br>
+starts with a conversation.
+</h2>
+
+<a href="#questionnaire" class="button">
+START QUESTIONNAIRE
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container footer-inner">
+
+<span>
+© 2026 Herbal Force
+</span>
+
+<span>
+South Africa • Skin Care & Consultations
+</span>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* MOBILE MENU */
+
+const menuButton =
+document.getElementById("menuButton");
+
+const mobileMenu =
+document.getElementById("mobileMenu");
+
+menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+});
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+    });
+});
+
+
+/* PREVENT PAST DATES */
+
+const dateInput =
+document.getElementById("date");
+
+const today =
+new Date().toISOString().split("T")[0];
+
+dateInput.min = today;
+
+
+/* QUESTIONNAIRE */
+
+let questionnaireData = {};
+
+document
+.getElementById("skinForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const concerns =
+    [...document.querySelectorAll(
+        'input[name="concern"]:checked'
+    )]
+    .map(item => item.value);
+
+    questionnaireData = {
+        name:
+        document.getElementById("name").value,
+
+        concerns:
+        concerns.join(", ") || "Not specified",
+
+        duration:
+        document.getElementById("duration").value,
+
+        productsUsed:
+        document.getElementById("productsUsed").value,
+
+        history:
+        document.getElementById("history").value,
+
+        notes:
+        document.getElementById("notes").value
+    };
+
+    document
+    .getElementById("booking")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+});
+
+
+/* BOOKING */
+
+document
+.getElementById("bookingForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    if(!questionnaireData.name){
+
+        alert(
+        "Please complete the skin questionnaire first."
+        );
+
+        document
+        .getElementById("questionnaire")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+        return;
+    }
+
+    const date =
+    document.getElementById("date").value;
+
+    const time =
+    document.querySelector(
+        'input[name="time"]:checked'
+    ).value;
+
+    const phone =
+    document.getElementById("phone").value;
+
+    const email =
+    document.getElementById("email").value;
+
+    const message =
+`HERBAL FORCE CONSULTATION REQUEST
+
+Name:
+${questionnaireData.name}
+
+Concern:
+${questionnaireData.concerns}
+
+Duration:
+${questionnaireData.duration}
+
+Used medicines / creams / steroids / supplements:
+${questionnaireData.productsUsed}
+
+Details:
+${questionnaireData.history || "None provided"}
+
+Additional notes:
+${questionnaireData.notes || "None provided"}
+
+Preferred date:
+${date}
+
+Preferred time:
+${time}
+
+Phone / WhatsApp:
+${phone}
+
+Email:
+${email || "Not provided"}
+
+Please confirm availability.`;
+
+    /*
+      This opens the user's email application.
+      Replace the address below with Herbal Force's
+      confirmed consultation email if the business
+      provides a different one.
+    */
+
+    const clinicEmail =
+    "seabdulla@gmail.com";
+
+    const subject =
+    encodeURIComponent(
+        "Herbal Force Consultation Request"
+    );
+
+    const body =
+    encodeURIComponent(message);
+
+    window.location.href =
+    `mailto:${clinicEmail}?subject=${subject}&body=${body}`;
+
+});
+
+</script>
+
+</body>
+</html>
